@@ -1,7 +1,7 @@
 import heroPic from "./assets/hero-pic.png";
 import LinkedInIcon from "./assets/linkedin.png";
 import GitHubIcon from "./assets/github.png";
-import AboutMePic from "./assets/aboutMe-pic.jpeg";
+// import AboutMePic from "./assets/aboutMe-pic.jpeg";
 import ExpIcon from "./assets/experience.png";
 import EducationIcon from "./assets/education.png";
 import ArrowIcon from "./assets/arrow.png";
@@ -11,72 +11,12 @@ import Project2 from "./assets/project-2.png";
 import Project3 from "./assets/project-3.png";
 import EmailIcon from "./assets/email.png";
 
-import { useState } from "react";
+import NavBar from "./components/NavBar";
 
 function App() {
-  const [toggleMenu, setToggleMenu] = useState(false);
-
   return (
     <>
-      <nav id="desktop-nav">
-        <div className="logo">DS.Dev</div>
-        <div>
-          <ul className="nav-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <nav id="hamburger-nav">
-        <div className="logo">DS.Dev</div>
-
-        {/* Hamburger Icon */}
-        <div
-          className={toggleMenu ? "hamburger-icon open" : "hamburger-icon"}
-          onClick={() => setToggleMenu(!toggleMenu)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        {/* Menu Links */}
-        <div className={toggleMenu ? "menu-links open" : "menu-links"}>
-          <ul>
-            <li>
-              <a href="#about" onClick={() => setToggleMenu(false)}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#experience" onClick={() => setToggleMenu(false)}>
-                Experience
-              </a>
-            </li>
-            <li>
-              <a href="#projects" onClick={() => setToggleMenu(false)}>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" onClick={() => setToggleMenu(false)}>
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <NavBar />
 
       <section id="profile">
         <div className="section__pic-container">
@@ -128,9 +68,9 @@ function App() {
         <p className="section__text__p1">Get To Know More</p>
         <h1 className="title">About Me</h1>
         <div className="section-container">
-          <div className="section__pic-container">
+          {/* <div className="section__pic-container">
             <img src={AboutMePic} alt="Profile Picture" className="about-pic" />
-          </div>
+          </div> */}
           <div className="about-details-container">
             <div className="about-containers">
               <div className="details-container">
