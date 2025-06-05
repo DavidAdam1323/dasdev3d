@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <header className="navbar bg-black">
       <div className="inner px-2 py-2 rounded-xl bg-[#191919]">
-        <a href="#profile">
+        <a href="#hero">
           <img
             src={Logo}
             alt="Logo"

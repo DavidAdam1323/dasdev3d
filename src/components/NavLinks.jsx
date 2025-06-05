@@ -1,6 +1,6 @@
 const NavLinks = () => {
   const links = [
-    { name: "Home", link: "#profile" },
+    { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
     { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
