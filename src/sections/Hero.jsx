@@ -1,8 +1,9 @@
 import Bg from "/images/bg.png";
-import IdeasIcon from "/public/images/ideas.svg";
-import ConcecptsIcon from "/public/images/concepts.svg";
-import DesignsIcon from "/public/images/designs.svg";
-import CodeIcon from "/public/images/code.svg";
+import IdeasIcon from "/images/ideas.svg";
+import ConcecptsIcon from "/images/concepts.svg";
+import DesignsIcon from "/images/designs.svg";
+import CodeIcon from "/images/code.svg";
+import Button from "../components/Button";
 
 const Hero = () => {
   const words = [
@@ -54,6 +55,7 @@ const Hero = () => {
               Hi! I'm David, a London-based developer building high-quality
               digital experiences.
             </p>
+            <Button />
           </div>
         </header>
 
