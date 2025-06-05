@@ -12,11 +12,13 @@ import Project3 from "./assets/project-3.png";
 import EmailIcon from "./assets/email.png";
 
 import NavBar from "./components/NavBar";
+import Hero from "./sections/Hero";
 
 function App() {
   return (
     <>
       <NavBar />
+      <Hero />
 
       <section id="profile">
         <div className="section__pic-container">

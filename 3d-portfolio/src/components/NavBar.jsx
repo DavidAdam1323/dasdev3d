@@ -1,5 +1,6 @@
 import NavLinks from "./NavLinks";
-import Logo from "/public/logo/dasdev-logo.png";
+import Logo from "../assets/dasdev-logo.png";
+
 const NavBar = () => {
   return (
     <header className="navbar bg-black">
