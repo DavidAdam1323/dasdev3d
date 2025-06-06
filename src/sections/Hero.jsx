@@ -55,7 +55,11 @@ const Hero = () => {
               Hi! I'm David, a London-based developer building high-quality
               digital experiences.
             </p>
-            <Button />
+            <Button
+              id="button"
+              className="md:w-80 md:h-16 w-60 h-12"
+              text="See My Work"
+            />
           </div>
         </header>
 

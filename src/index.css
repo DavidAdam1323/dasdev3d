@@ -203,7 +203,7 @@ section {
     } */
 }
 
-/* .cta-wrapper {
+.cta-wrapper {
     @apply relative z-20 cursor-pointer;
   }
 
@@ -217,7 +217,7 @@ section {
     }
 
     .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500
+      @apply font-semibold md:text-lg text-black transition-all duration-500
         group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
 
@@ -229,7 +229,7 @@ section {
         @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
       }
     }
-  } */
+  }
 
 /* .card-border {
     @apply border border-black-50 bg-black-100;
@@ -491,10 +491,10 @@ p {
 } */
 
 /* TRANSITION */
-a,
+/* a,
 .btn {
   transition: all 300ms ease;
-}
+} */
 
 /* DESKTOP NAV */
 /* nav,
