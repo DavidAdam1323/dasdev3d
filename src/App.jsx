@@ -1,4 +1,4 @@
-import heroPic from "./assets/hero-pic.png";
+// import heroPic from "./assets/hero-pic.png";
 import LinkedInIcon from "./assets/linkedin.png";
 import GitHubIcon from "./assets/github.png";
 // import AboutMePic from "./assets/aboutMe-pic.jpeg";
@@ -20,7 +20,7 @@ function App() {
       <NavBar />
       <Hero />
 
-      <section id="profile">
+      {/* <section id="profile">
         <div className="section__pic-container">
           <img src={heroPic} alt="David A. Silva" />
         </div>
@@ -64,16 +64,16 @@ function App() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section id="about">
+      {/* <section id="about">
         <p className="section__text__p1">Get To Know More</p>
         <h1 className="title">About Me</h1>
-        <div className="section-container">
+        <div className="section-container"> */}
           {/* <div className="section__pic-container">
             <img src={AboutMePic} alt="Profile Picture" className="about-pic" />
           </div> */}
-          <div className="about-details-container">
+          {/* <div className="about-details-container">
             <div className="about-containers">
               <div className="details-container">
                 <img src={ExpIcon} alt="Experience Icon" className="icon" />
@@ -118,7 +118,7 @@ function App() {
             location.href = "./#experience";
           }}
         />
-      </section>
+      </section> */}
 
       <section id="experience">
         <p className="section__text__p1">Explore My</p>

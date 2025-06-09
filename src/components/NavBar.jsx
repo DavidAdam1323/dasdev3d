@@ -4,7 +4,7 @@ import Logo from "../assets/dasdev-logo.png";
 const NavBar = () => {
   return (
     <header className="navbar bg-black">
-      <div className="inner px-2 py-2 rounded-xl bg-[#191919]">
+      <div className="inner px-4 py-4 xl:rounded-lg rounded-lg bg-[#191919]">
         <a href="#hero">
           <img
             src={Logo}

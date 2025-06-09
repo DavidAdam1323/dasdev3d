@@ -8,6 +8,7 @@ import HeroExp from "./models/HeroExp";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import AnimatedCounter from "../components/AnimatedCounter";
 
 const Hero = () => {
   useGSAP(() => {
@@ -40,9 +41,9 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
+      {/* <div className="absolute top-0 left-0 z-10">
         <img src={Bg} alt="background" />
-      </div>
+      </div> */}
 
       <div className="hero-layout">
         {/* LEFT: HERO CONTENT */}
@@ -92,6 +93,8 @@ const Hero = () => {
           </div>
         </figure>
       </div>
+
+      <AnimatedCounter />
     </section>
   );
 };
