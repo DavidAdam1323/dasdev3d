@@ -4,6 +4,7 @@ import ConcecptsIcon from "/images/concepts.svg";
 import DesignsIcon from "/images/designs.svg";
 import CodeIcon from "/images/code.svg";
 import Button from "../components/Button";
+import HeroExp from "./models/HeroExp";
 
 const Hero = () => {
   const words = [
@@ -25,7 +26,7 @@ const Hero = () => {
 
       <div className="hero-layout">
         {/* LEFT: HERO CONTENT */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+        <header className="hero-left">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
@@ -51,7 +52,7 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="text-white-50 md:text-xl text-[15px] relative z-10 pointer-events-none">
               Hi! I'm David, a London-based developer building high-quality
               digital experiences.
             </p>
@@ -64,6 +65,11 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D MODEL */}
+        <figure className="hero-right">
+          <div className="model-bg">
+            <HeroExp />
+          </div>
+        </figure>
       </div>
     </section>
   );
