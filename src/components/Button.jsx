@@ -1,8 +1,8 @@
 import Arrow from "/images/arrow-down.svg";
 
-const Button = ({ text, className, id }) => {
+const Button = ({ text, className, id, href }) => {
   return (
-    <a id={id} className={`${className ?? ''} cta-wrapper`}>
+    <a id={id} href={href} className={`${className ?? ''} cta-wrapper`}>
       <div className="cta-button group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
