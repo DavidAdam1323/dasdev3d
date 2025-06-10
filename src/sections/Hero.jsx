@@ -1,10 +1,10 @@
-import Bg from "/images/bg.png";
+// import Bg from "/images/bg.png";
 import IdeasIcon from "/images/ideas.svg";
 import ConcecptsIcon from "/images/concepts.svg";
 import DesignsIcon from "/images/designs.svg";
 import CodeIcon from "/images/code.svg";
 import Button from "../components/Button";
-import HeroExp from "./models/HeroExp";
+import HeroExp from "../components/models/heroModel/HeroExp";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
