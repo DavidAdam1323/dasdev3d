@@ -13,6 +13,7 @@ import EmailIcon from "./assets/email.png";
 
 import NavBar from "./components/NavBar";
 import Hero from "./sections/Hero";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
@@ -120,7 +121,7 @@ function App() {
         />
       </section> */}
 
-      <section id="experience">
+      {/* <section id="experience">
         <p className="section__text__p1">Explore My</p>
         <h1 className="title">Experience</h1>
         <div className="experience-details-container">
@@ -255,9 +256,9 @@ function App() {
             location.href = "./#projects";
           }}
         />
-      </section>
+      </section> */}
 
-      <section id="projects">
+      {/* <section id="projects">
         <p className="section__text__p1">Browse My Recent</p>
         <h1 className="title">Projects</h1>
         <div className="experience-details-container">
@@ -351,9 +352,9 @@ function App() {
             location.href = "./#contact";
           }}
         />
-      </section>
+      </section> */}
 
-      <section id="contact">
+      {/* <section id="contact">
         <p className="section__text__p1">Get In Touch</p>
         <h1 className="title">Contact Me</h1>
         <div className="contact-info-upper-container">
@@ -378,9 +379,11 @@ function App() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <footer>
+      <Contact />
+
+      {/* <footer>
         <nav>
           <div className="nav-links-container">
             <ul className="nav-links">
@@ -400,7 +403,7 @@ function App() {
           </div>
         </nav>
         <p>copyright &#169; 2024 | David Adam Silva - All Rights Reserved</p>
-      </footer>
+      </footer> */}
     </>
   );
 }
