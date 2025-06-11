@@ -1,20 +1,37 @@
+import { useRef } from "react";
 import Button from "../components/Button";
 import TitleHeader from "../components/TitleHeader";
+import AboutMePic from "../assets/AboutMePic.jpeg";
+
+import UseScrollReveal from "../hooks/UseScrollReveal";
 
 const About = () => {
+  const sectionRef = useRef(null);
+  UseScrollReveal(sectionRef, {
+    selector: ".reveal",
+    stagger: 0.4,
+    duration: 1.5,
+  });
+
   return (
-    <section id="about" className="relative overflow-hidden md:pt-40 pt-10">
-      <TitleHeader
-        eyebrowText="Get to Know Me"
-        titleText="A Little About My Journey"
-      />
+    <section
+      id="about"
+      ref={sectionRef}
+      className="relative overflow-hidden md:pt-40 pt-10"
+    >
+      <div className="reveal">
+        <TitleHeader
+          eyebrowText="Get to Know Me"
+          titleText="A Little About My Journey"
+        />
+      </div>
 
       <div className="mx-auto xl:px-20 px-5">
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] items-center bg-black-100 border border-black-200 rounded-lg relative">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] items-center bg-black-100 border border-black-200 rounded-lg relative reveal">
           {/* LEFT SIDE - IMAGE CONTAINER */}
-          <div className="order-1 md:order-2 flex justify-start md:p-7 p-5">
+          <div className="order-1 md:order-2 flex justify-start md:p-7 p-5 reveal">
             <img
-              src="src/assets/AboutMePic.jpeg"
+              src={AboutMePic}
               alt="Profile Picture"
               className="rounded-lg w-full max-w-sm md:max-w-md lg:max-w-xl object-cover"
             />
@@ -22,7 +39,7 @@ const About = () => {
 
           {/* RIGHT SIDE - TEXT CONTENT */}
           <div className="order-2 md:order-3 w-full space-y-6 text-[20px] md:text-xl text-justify text-white-50 lg:pl-0 lg:pr-7 p-5 z-10">
-            <p>
+            <p className="reveal">
               My journey into tech began on an unexpected stage — the music
               industry. For 21 years, I worked as a session guitarist,
               collaborating with artists, tutoring students, and performing
@@ -33,7 +50,7 @@ const About = () => {
               and stay calm in high-stakes environments.
             </p>
 
-            <p>
+            <p className="reveal">
               When I transitioned into tech, I discovered that many of the same
               principles applied. Writing clean, efficient code reminded me of
               composing music — deliberate, layered, and collaborative. I found
@@ -43,7 +60,7 @@ const About = () => {
               focus, empathy, and a commitment to excellence.
             </p>
 
-            <p>
+            <p className="reveal">
               I’m someone who thrives in collaborative environments, takes
               initiative, and is always looking at how my contributions fit into
               the bigger picture. I'm passionate about creating meaningful
@@ -54,7 +71,7 @@ const About = () => {
             </p>
 
             {/* CV - BUTTON */}
-            <div className="w-full md:w-[350px] h-auto">
+            <div className="w-full md:w-[350px] h-auto reveal">
               <Button id="" href="" className="" text="Download My CV" />
             </div>
           </div>
