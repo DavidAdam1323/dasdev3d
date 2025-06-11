@@ -14,12 +14,14 @@ import EmailIcon from "./assets/email.png";
 import NavBar from "./components/NavBar";
 import Hero from "./sections/Hero";
 import Contact from "./sections/Contact";
+import About from "./sections/About";
 
 function App() {
   return (
     <>
       <NavBar />
       <Hero />
+      <About />
 
       {/* <section id="profile">
         <div className="section__pic-container">
