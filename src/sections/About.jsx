@@ -19,12 +19,10 @@ const About = () => {
       ref={sectionRef}
       className="relative overflow-hidden md:pt-40 pt-10"
     >
-      <div className="reveal">
-        <TitleHeader
-          eyebrowText="Get to Know Me"
-          titleText="A Little About My Journey"
-        />
-      </div>
+      <TitleHeader
+        eyebrowText="Get to Know Me"
+        titleText="A Little About My Journey"
+      />
 
       <div className="mx-auto xl:px-20 px-5">
         <div className="mt-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] items-center bg-black-100 border border-black-200 rounded-lg relative reveal">
