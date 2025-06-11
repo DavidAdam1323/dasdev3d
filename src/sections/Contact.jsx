@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import UseScrollReveal from "../hooks/UseScrollReveal";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
@@ -11,6 +12,13 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+  });
+
+  const contactRef = useRef(null);
+  UseScrollReveal(contactRef, {
+    selector: ".reveal",
+    stagger: 0.4,
+    duration: 1.5,
   });
 
   const handleChange = (e) => {
@@ -40,11 +48,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex-center section-padding">
+    <section
+      id="contact"
+      ref={contactRef}
+      className="flex-center section-padding"
+    >
       <div className="w-full h-full md:px-10 px-0">
         <TitleHeader eyebrowText="Get In Touch" titleText="Contact Me" />
 
-        <div className="grid-12-cols xl:mt-16 mt-5">
+        <div className="grid-12-cols xl:mt-16 mt-5 reveal">
           {/* CONTACT FORM -LEFT SIDE */}
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-lg py-10 px-5">
@@ -92,7 +104,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" disabled={loading}>
+                <button type="submit" disabled={loading} className="reveal">
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
