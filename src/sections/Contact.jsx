@@ -54,7 +54,7 @@ const Contact = () => {
       className="flex-center section-padding"
     >
       <div className="w-full h-full md:px-10 px-0">
-        <TitleHeader eyebrowText="Get In Touch" titleText="Contact Me" />
+        <TitleHeader eyebrowText="Get In Touch" titleText="Let's Create Digital Experiences" />
 
         <div className="grid-12-cols xl:mt-16 mt-5 reveal">
           {/* CONTACT FORM -LEFT SIDE */}
@@ -66,39 +66,39 @@ const Contact = () => {
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Your name</label>
+                  <label htmlFor="name">Name:</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="Your Full Name..."
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email">Your Email</label>
+                  <label htmlFor="email">Email:</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="What’s your email address?"
+                    placeholder="Your Email Address..."
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message">Your Message</label>
+                  <label htmlFor="message">Message:</label>
                   <textarea
                     id="message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="How can I help you?"
+                    placeholder="Enter your message here..."
                     rows="5"
                     required
                   />
