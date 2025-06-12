@@ -1,59 +1,59 @@
-import { useEffect } from "react";
+import gsap from "gsap";                                                // GSAP handles animations
+import { ScrollTrigger } from "gsap/ScrollTrigger";                     // This plugin lets you trigger animations on scroll
 
-import gsap from "gsap"; // GSAP core library for animations
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // ScrollTrigger plugin to trigger animations on scroll
 
-gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin with GSAP
+// Register the ScrollTrigger plugin with GSAP (must do before using it)
+gsap.registerPlugin(ScrollTrigger);
 
-/**
- * Custom hook for scroll-triggered animations using GSAP and ScrollTrigger.
- *
- * @param {RefObject} containerRef - Ref to the container DOM element
- * @param {Object} options - Animation settings
- *   @property {string} selector - CSS selector for target children
- *   @property {Object} from - Initial animation state
- *   @property {Object} to - Final animation state
- *   @property {number} stagger - Stagger delay between elements
- *   @property {number} duration - Duration of each animation
- *   @property {string} triggerStart - Scroll start position
- *   @property {boolean} once - Whether animation should only play once
- */
 
-const useScrollReveal = (
-  containerRef,
-  {
-    selector = "*",
-    from = { opacity: 0, y: 30 },
-    to = { opacity: 1, y: 0 },
-    stagger = 0.3,
-    duration = 1.5,
-    triggerStart = "top 80%",
-    once = true,
-  } = {}
-) => {
-  useEffect(() => {
+// Custom hook: useScrollReveal- this hook returns a function that applies reveal animations to a set of elements when they enter the viewport.
+const useScrollReveal = () => {
+
+  /**
+   * Animate function
+   * @param {RefObject} containerRef - A React ref pointing to the section or container DOM node.
+   * @param {Object} options - Configuration for the reveal animation.
+   */
+
+  const animate = (
+    containerRef,
+    {
+      selector = "*",                                                  // CSS selector for elements to animate within the container
+      from = { opacity: 0, y: 30 },                                    // Initial animation state (e.g., hidden and slightly below)
+      to = { opacity: 1, y: 0 },                                       // Final animation state (e.g., visible and in place)
+      stagger = 0.3,                                                   // Delay between each element's animation start
+      duration = 1.5,                                                  // Duration of each animation
+      triggerStart = "top 80%",                                        // When to trigger the animation relative to viewport
+      once = true,                                                     // If true, animation runs only once; otherwise, re-triggers on scroll
+    } = {}
+  ) => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) return; // Exit if the container doesn't exist yet
 
-    // Select elements inside the container using the provided selector
+    // Select all target elements inside the container based on the selector
     const elements = gsap.utils.toArray(container.querySelectorAll(selector));
 
-    // Animate each element from its 'from' state to its 'to' state
-    gsap.fromTo(elements, from, {
-      ...to,
-      duration,
-      stagger,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: container,
-        start: triggerStart,
-        toggleActions: once ? "play none none none" : "play reverse play reverse",
-      },
-    });
+    // Apply the GSAP fromTo animation with ScrollTrigger
+    gsap.fromTo(
+      elements,
+      from,
+      {
+        ...to,
+        duration,
+        stagger,
+        ease: "power2.out",                                            // Smooth easing for natural motion
+        scrollTrigger: {
+          trigger: container,                                          // What triggers the animation
+          start: triggerStart,                                         // Scroll position to start animation
+          toggleActions: once
+            ? "play none none none"                                    // Run only once
+            : "play reverse play reverse",                             // Re-run on scroll in and out
+        },
+      }
+    );
+  };
 
-    // Clean up ScrollTriggers on unmount
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  }, [containerRef, selector, from, to, stagger, duration, triggerStart, once]);
+  return animate; // Return the animation function to be used inside your components
 };
 
 export default useScrollReveal;
