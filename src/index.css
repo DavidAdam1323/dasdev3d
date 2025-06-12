@@ -81,12 +81,6 @@ section {
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   }
 
-  /* @media (min-width: 1280px) {
-    .hero-layout {
-      min-height: 100vh;
-    }
-  } */
-
   .hero-layout {
     @apply relative z-10 mt-30 md:mt-32 xl:mt-20 w-full h-auto min-h-[70vh] flex flex-col xl:flex-row items-start xl:items-center justify-center gap-y-10 gap-x-5 xl:gap-y-0 px-5 md:px-20;
   }
@@ -160,61 +154,17 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white-50 text-black group-hover:bg-[#8bbccc] transition-colors duration-300;
+        @apply px-5 py-2 rounded-lg bg-white-50 inset-shadow-[#45474B] 
+          border border-black-50 inset-shadow-sm text-black-100 
+          font-semibold group-hover:bg-black-200 hover:inset-shadow-sm 
+          hover:inset-shadow-black hover:border-black transition-colors duration-150;
 
         span {
-          @apply group-hover:text-white transition-colors duration-300;
+          @apply group-hover:text-white-50 transition-colors duration-300;
         }
       }
     }
   }
-
-  /* .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
-
-    .showcaselayout {
-      @apply flex xl:flex-row flex-col gap-10 justify-between;
-    }
-
-    .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
-
-      .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
-
-        img {
-          @apply w-full h-full object-cover rounded-xl absolute inset-0;
-        }
-      }
-
-      .text-content {
-        @apply space-y-5 mt-5;
-
-        .badges {
-          @apply flex gap-2 mb-4;
-        }
-
-        h2 {
-          @apply text-2xl md:text-3xl lg:text-4xl font-bold;
-        }
-      }
-    } */
-
-  /* .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
-
-      .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
-      }
-
-      img {
-        @apply w-full h-full object-contain rounded-xl;
-      }
-
-      h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
-      }
-    } */
 }
 
 .cta-wrapper {
@@ -222,7 +172,9 @@ section {
 }
 
 .cta-button {
-  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+  @apply px-4 py-4 rounded-lg hover:bg-black-200 flex justify-center 
+      items-center relative cursor-pointer overflow-hidden 
+      inset-shadow-sm hover:inset-shadow-black hover:border border-black-50;
 
   .bg-circle {
     @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
@@ -240,7 +192,8 @@ section {
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
     img {
-      @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+      @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce 
+        group-hover:translate-y-0 transition-all duration-500;
     }
   }
 }
