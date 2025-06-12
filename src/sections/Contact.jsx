@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import emailjs from "@emailjs/browser";
 
@@ -7,6 +7,8 @@ import ContactExperience from "../components/models/contactModel/ContactExperien
 
 const Contact = () => {
   const formRef = useRef(null);
+  const contactRef = useRef(null);
+
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -14,12 +16,15 @@ const Contact = () => {
     message: "",
   });
 
-  const contactRef = useRef(null);
-  useScrollReveal(contactRef, {
-    selector: ".reveal",
-    stagger: 0.4,
-    duration: 1.5,
-  });
+  const animate = useScrollReveal();
+
+  useEffect(() => {
+    animate(contactRef, {
+      selector: ".reveal",
+      stagger: 0.4,
+      duration: 1.5,
+    });
+  }, [animate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,7 +59,10 @@ const Contact = () => {
       className="flex-center section-padding"
     >
       <div className="w-full h-full md:px-10 px-0">
-        <TitleHeader eyebrowText="Get In Touch" titleText="Let's Create Digital Experiences" />
+        <TitleHeader
+          eyebrowText="Get In Touch"
+          titleText="Let's Create Digital Experiences"
+        />
 
         <div className="grid-12-cols xl:mt-16 mt-5 reveal">
           {/* CONTACT FORM -LEFT SIDE */}
