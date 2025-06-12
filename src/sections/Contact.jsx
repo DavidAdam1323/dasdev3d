@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import UseScrollReveal from "../hooks/UseScrollReveal";
+import useScrollReveal from "../hooks/useScrollReveal";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
@@ -15,7 +15,7 @@ const Contact = () => {
   });
 
   const contactRef = useRef(null);
-  UseScrollReveal(contactRef, {
+  useScrollReveal(contactRef, {
     selector: ".reveal",
     stagger: 0.4,
     duration: 1.5,
