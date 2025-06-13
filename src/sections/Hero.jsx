@@ -1,8 +1,4 @@
-// import Bg from "/images/bg.png";
-import IdeasIcon from "/images/ideas.svg";
-import ConcecptsIcon from "/images/concepts.svg";
-import DesignsIcon from "/images/designs.svg";
-import CodeIcon from "/images/code.svg";
+import { words } from "../constants";
 import Button from "../components/Button";
 import HeroExp from "../components/models/heroModel/HeroExp";
 
@@ -27,17 +23,6 @@ const Hero = () => {
       }
     );
   });
-
-  const words = [
-    { text: "Ideas", img: IdeasIcon },
-    { text: "Concepts", img: ConcecptsIcon },
-    { text: "Designs", img: DesignsIcon },
-    { text: "Code", img: CodeIcon },
-    { text: "Ideas", img: IdeasIcon },
-    { text: "Concepts", img: ConcecptsIcon },
-    { text: "Designs", img: DesignsIcon },
-    { text: "Code", img: CodeIcon },
-  ];
 
   return (
     <section id="hero" className="relative overflow-hidden">
