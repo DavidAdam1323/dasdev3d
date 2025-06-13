@@ -1,3 +1,11 @@
+// NavLinks
+const links = [
+  { name: "Home", link: "#hero" },
+  { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
+];
+
 // AnimatedCounter
 const counterItems = [
   { value: 1, suffix: "+", label: "Years of Experience" },
@@ -32,4 +40,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { projects, counterItems };
+export { links, counterItems, projects };

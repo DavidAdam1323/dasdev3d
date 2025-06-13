@@ -1,11 +1,6 @@
-const NavLinks = () => {
-  const links = [
-    { name: "Home", link: "#hero" },
-    { name: "About", link: "#about" },
-    { name: "Experience", link: "#experience" },
-    { name: "Projects", link: "#projects" },
-  ];
+import { links } from "../constants";
 
+const NavLinks = () => {
   return (
     <>
       <ul>
