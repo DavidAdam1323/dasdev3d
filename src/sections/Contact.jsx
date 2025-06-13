@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="grid-12-cols xl:mt-16 mt-9 reveal">
           {/* CONTACT FORM -LEFT SIDE */}
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-lg md:py-10 py-5 px-5">
+            <div className="flex-center card-border rounded-lg w-full h-[550px] md:py-5 py-5 px-5">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -128,7 +128,7 @@ const Contact = () => {
           </div>
 
           {/* 3D EXPERIENCE - RIGHT SIDE */}
-          <div className="xl:col-span-7 min-h-96">
+          <div className="xl:col-span-7 min-h-70 md:h-[590px] pb-10">
             <div
               className="w-full max-w-[350px] sm:max-w-[500px] xl:max-w-full 
                 h-[280px] sm:h-[400px] xl:h-full border border-[#c78d56]
