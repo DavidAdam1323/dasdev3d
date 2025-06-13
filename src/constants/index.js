@@ -1,3 +1,11 @@
+// AnimatedCounter
+const counterItems = [
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 3, suffix: "+", label: "Satisfied Clients" },
+  { value: 5, suffix: "+", label: "Completed Projects" },
+  { value: 100, suffix: "%", label: "Client Retention Rate" },
+];
+
 // Dummy project data
 const projects = [
   {
@@ -24,4 +32,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { projects };
+export { projects, counterItems };
