@@ -3,6 +3,7 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Projects from "./sections/Projects";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -12,28 +13,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
-
-      {/* <footer>
-        <nav>
-          <div className="nav-links-container">
-            <ul className="nav-links">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#experience">Experience</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <p>copyright &#169; 2024 | David Adam Silva - All Rights Reserved</p>
-      </footer> */}
+      <Footer />
     </>
   );
 }
