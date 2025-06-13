@@ -11,8 +11,8 @@ const Projects = () => {
   useEffect(() => {
     animate(sectionRef, {
       selector: ".reveal",
-      stagger: 0.4,
-      duration: 1.5,
+      stagger: 0.2,
+      duration: 0.8,
     });
   }, [animate]);
 

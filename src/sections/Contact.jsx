@@ -22,7 +22,7 @@ const Contact = () => {
     animate(contactRef, {
       selector: ".reveal",
       stagger: 0.4,
-      duration: 1.5,
+      duration: 0.8,
     });
   }, [animate]);
 
