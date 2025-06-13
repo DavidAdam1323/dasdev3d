@@ -43,7 +43,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden md:pt-40 pt-10"
+      className="relative overflow-hidden md:pt-40 pt-25"
     >
       {/* Title section with eyebrow and headline */}
       <TitleHeader
@@ -51,7 +51,7 @@ const About = () => {
         titleText="A Little About My Journey"
       />
 
-      <div className="mx-auto xl:px-20 px-5">
+      <div className="mx-auto md:px-20 px-5 mt-7">
         <div
           className="lg:mt-10 mt-5 grid grid-cols-1 md:grid-cols-[1fr_2fr] 
               items-center bg-black-100 border border-black-200 

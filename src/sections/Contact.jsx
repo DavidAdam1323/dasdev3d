@@ -56,18 +56,18 @@ const Contact = () => {
     <section
       id="contact"
       ref={contactRef}
-      className="flex-center section-padding"
+      className="relative overflow-hidden md:pt-40 pt-25"
     >
-      <div className="w-full h-full md:px-10 px-0">
+      <div className="mx-auto px-5 w-full h-full md:px-20">
         <TitleHeader
           eyebrowText="Get In Touch"
           titleText="Let's Create Digital Experiences"
         />
 
-        <div className="grid-12-cols xl:mt-16 mt-5 reveal">
+        <div className="grid-12-cols xl:mt-16 mt-9 reveal">
           {/* CONTACT FORM -LEFT SIDE */}
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-lg py-10 px-5">
+            <div className="flex-center card-border rounded-lg md:py-10 py-5 px-5">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
