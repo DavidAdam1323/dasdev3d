@@ -22,28 +22,28 @@ const counterItems = [
   { value: 100, suffix: "%", label: "Client Retention Rate" },
 ];
 
-// Dummy project data
+// Projects - Project Card Info
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio showcasing my projects and skills.",
-    github: "https://github.com/your-username/portfolio",
-    demo: "https://your-portfolio.com",
-    image: "/images/portfolio.png",
+    title: "Digital Product Passport - DPP",
+    description: "A web App that provides product info and digital passports via QR codes to support recycling and sustainability.",
+    github: "https://github.com/DavidAdam1323/eslando-SoCfinal-project",
+    demo: "https://eslando.vercel.app/?product=2",
+    image: "/images/project1.png",
   },
   {
-    title: "Weather App",
-    description: "A weather forecasting app using OpenWeather API.",
-    github: "https://github.com/your-username/weather-app",
-    demo: "https://weather-app-demo.com",
-    image: "/images/weather.png",
+    title: "CDR Devs — Portfolio Website",
+    description: "CDR Devs is a portfolio website by a passionate trio of frontend developers who bring digital visions to life.",
+    github: "https://github.com/DavidAdam1323/cdrWebsite-vite",
+    demo: "https://cdr-website-vite.vercel.app/",
+    image: "/images/project2.png",
   },
   {
-    title: "Task Manager",
-    description: "Manage your tasks efficiently with drag-and-drop features.",
-    github: "https://github.com/your-username/task-manager",
-    demo: "https://task-manager-demo.com",
-    image: "/images/task.png",
+    title: "Neural Vision Publicity - NVP",
+    description: "A digital marketing website focused on innovative strategies, boost engagement, and drive results online.",
+    github: "https://github.com/DavidAdam1323/nvp-website-project",
+    demo: "https://davidadam1323.github.io/nvp-website-project/",
+    image: "/images/project3.png",
   },
   // Add more projects...
 ];
