@@ -41,7 +41,8 @@ const Projects = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden md:grid grid-3-cols w-full px-4 md:px-10">
+      <div className="hidden md:flex wrap-normal justify-between w-full px-5 md:px-20">
+      {/* <div className="hidden md:grid grid-3-cols w-full px-5 md:px-20"> */}
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
