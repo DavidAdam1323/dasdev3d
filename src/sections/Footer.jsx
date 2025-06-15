@@ -14,8 +14,8 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div>
-          <ul className="flex md:gap-56 gap-10 text-sm text-blue-50">
+        <div className="flex flex-col justify-center">
+          <ul className="flex md:gap-30 gap-5 text-sm text-blue-50">
             {links.map(({ link, name }) => (
               <li key={name} className="hover:text-white-50 transition">
                 <a href={link} title={name}>
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex gap-5 text-lg">
+        <div className="flex md:gap-15 gap-5 text-lg">
           <a
             href="https://github.com/DavidAdam1323"
             target="_blank"
