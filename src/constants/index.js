@@ -2,7 +2,6 @@
 const links = [
   { name: "Home", link: "#hero" },
   { name: "About", link: "#about" },
-  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
 ];
 
