@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import Button from "../components/Button";
 import TitleHeader from "../components/TitleHeader";
 import AboutMePic from "../assets/AboutMePic.jpeg";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import useScrollReveal from "../hooks/useScrollReveal";                                     // Custom hook for scroll-triggered animations
 import { useCollapse } from "react-collapsed";                                              // Hook to manage collapsible content
@@ -54,22 +55,22 @@ const About = () => {
       <div className="mx-auto md:px-20 px-5 mt-7">
         <div
           className="lg:mt-10 mt-5 grid grid-cols-1 md:grid-cols-[1fr_2fr] 
-              items-center bg-black-100 border border-black-200 
-              rounded-lg relative reveal"
+              items-center bg-black-100 border border-black-200 rounded-lg
+               relative reveal"
         >
           {/* LEFT SIDE - PROFILE IMAGE */}
-          <div className="order-1 md:order-2 flex justify-start md:p-7 p-5 pb-0 reveal">
+          <div className="order-1 md:order-2 p-5 md:h-[600px] reveal">
             <img
               src={AboutMePic}
               alt="Profile Picture"
-              className="rounded-lg w-full max-w-sm md:max-w-md lg:max-w-xl object-cover"
+              className="rounded-lg w-full md:h-[558px] object-cover"
             />
           </div>
 
           {/* RIGHT SIDE - TEXT CONTENT */}
           <div
-            className="order-2 md:order-3 w-full space-y-6 text-[20px] 
-                md:text-xl text-justify text-white-50 lg:pl-0 lg:pr-7 p-5 z-10"
+            className="order-2 md:order-3 w-full md:space-y-7 space-y-3 text-sm 
+                md:text-[21px] text-justify text-white-50 lg:pl-0 lg:pr-5 p-5 z-10"
           >
             {/* Intro paragraph — animated only on desktop */}
             <p className={!isMobile ? "reveal" : ""}>
@@ -79,7 +80,7 @@ const About = () => {
             {/* Collapsible Section — expands on mobile */}
             <div
               {...collapseProps}
-              className="space-y-6 text-[20px] md:text-xl"
+              className="md:space-y-7 space-y-3 text-sm md:text-[21px]"
             >
               <p className={!isMobile ? "reveal" : ""}>
                 For 21 years, I worked as a session guitarist, collaborating
@@ -108,8 +109,36 @@ const About = () => {
               </p>
 
               {/* Download CV Button (only animated on desktop) */}
-              <div className={!isMobile ? "w-full md:w-[350px] h-auto reveal" : ""}>
-                <Button id="" href="" className="" text="Download My CV" />
+              <div className={!isMobile ? "flex justify-between items-center pt-4" : ""}>
+                <div className={!isMobile ? "w-full md:w-[350px] h-auto reveal" : "mt-7"}>
+                  <Button id="" href="" className="" text="Download My CV" />
+                </div>
+
+                {/* Social Icons */}
+                <div className={!isMobile ? "flex justify-center md:gap-15 gap-5 text-lg reveal" : "flex flex-row justify-center items-center gap-10 my-7"}>
+                  <a
+                    href="https://github.com/DavidAdam1323"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-50 transition"
+                  >
+                    <FaGithub className="text-4xl" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/davidadamsilva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-50 transition"
+                  >
+                    <FaLinkedin className="text-4xl" />
+                  </a>
+                  <a
+                    href="mailto:davidadamgtr@gmail.com?subject=Let's Work Together&body=Hi David,"
+                    className="hover:text-blue-50 transition"
+                  >
+                    <FaEnvelope className="text-4xl" />
+                  </a>
+                </div>
               </div>
             </div>
 
