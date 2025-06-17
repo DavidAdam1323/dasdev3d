@@ -20,7 +20,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative overflow-hidden md:pt-40 pt-25"
+      className="relative overflow-hidden padding-x-lg pt-40"
     >
       <div className="md:mb-20 mb-7">
         <TitleHeader
@@ -31,7 +31,7 @@ const Projects = () => {
 
       {/* Mobile Carousel */}
       <div className="w-full md:hidden overflow-x-auto pb-4">
-        <div className="flex gap-6 px-5 snap-x snap-mandatory scroll-smooth">
+        <div className="flex gap-6 px-0 snap-x snap-mandatory scroll-smooth">
           {projects.map((project, index) => (
             <div key={index} className="min-w-[85%] snap-start shrink-0">
               <ProjectCard {...project} />
@@ -41,7 +41,7 @@ const Projects = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden md:flex wrap-normal justify-between w-full px-5 md:px-20">
+      <div className="hidden md:flex wrap-normal justify-between w-full px-5 md:px-0">
       {/* <div className="hidden md:grid grid-3-cols w-full px-5 md:px-20"> */}
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />

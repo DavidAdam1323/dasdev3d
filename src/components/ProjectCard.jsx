@@ -2,7 +2,7 @@ const ProjectCard = ({ title, description, github, demo, image }) => {
   return (
     <div className="bg-black-100 rounded-lg border border-black-200 
                     overflow-hidden p-6 reveal flex flex-col 
-                    md:w-[450px] w-[350px] h-[500px]">
+                    md:w-[450px] w-[390px] h-[500px]">
       {image && (
         <div className="md:h-[300px] md:w-[400px] h-[280px] w-auto mb-5">
           <img

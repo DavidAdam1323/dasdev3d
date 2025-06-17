@@ -28,7 +28,7 @@ const MobileNav = () => {
 
       {/* Drop-Down Menu */}
       <div
-        className={`absolute w-87.5 bg-black-100 shadow-xl right-0 mt-3 rounded-md 
+        className={`absolute w-97.5 bg-black-100 shadow-xl right-0 mt-3 rounded-md 
         z-50 transition-all duration-300 before:content-[''] before:absolute before:w-4 
         before:h-4 before:bg-black-200 before:rotate-45 before:right-4 before:-top-2
         ${
@@ -42,7 +42,7 @@ const MobileNav = () => {
             <li key={name}>
               <a
                 href={link}
-                className="block px-5 py-3 text-lg text-blue-50"
+                className="block px-5 py-3 text-xl text-blue-50"
                 onClick={() => setIsOpen(false)}
               >
                 {name}

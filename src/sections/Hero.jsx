@@ -33,10 +33,10 @@ const Hero = () => {
       <div className="hero-layout">
         {/* LEFT: HERO CONTENT */}
         <header className="hero-left">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-3 md:gap-7 ">
             <div className="hero-text">
               <h1>
-                Shaping{" "}
+                Transforming{" "}
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -47,7 +47,7 @@ const Hero = () => {
                         <img
                           src={word.img}
                           alt={word.text}
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-blue-50"
                         />
                         <span>{word.text}</span>
                       </span>
@@ -55,17 +55,17 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>into real-world solutions</h1>
+              <h1>that elevate digital experiences.</h1>
             </div>
-            <p className="text-white-50 md:text-xl text-[15px] relative z-10 pointer-events-none">
-              Hi! I'm David, a London-based developer building high-quality
+            <p className="text-blue-50 text-sm md:text-lg relative z-10 pointer-events-none">
+              Hello there! I'm David, a London-based developer building high-quality
               digital experiences.
             </p>
             <Button
               id="button"
               href="#projects"
-              className="md:w-80 md:h-16 w-60 h-12"
+              className="md:w-80 md:h-16 w-70 h-10 mt-3 mb-6"
               text="See My Work"
             />
           </div>
@@ -78,7 +78,6 @@ const Hero = () => {
           </div>
         </figure>
       </div>
-
       <AnimatedCounter />
     </section>
   );

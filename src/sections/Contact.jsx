@@ -56,7 +56,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={contactRef}
-      className="relative overflow-hidden md:pt-40 pt-25"
+      className="relative overflow-hidden pt-45"
     >
       <div className="mx-auto px-5 w-full h-full md:px-20">
         <TitleHeader
@@ -130,7 +130,7 @@ const Contact = () => {
           {/* 3D EXPERIENCE - RIGHT SIDE */}
           <div className="xl:col-span-7 min-h-70 md:h-[590px] pb-10">
             <div
-              className="w-full max-w-[350px] sm:max-w-[500px] xl:max-w-full 
+              className="w-full max-w-[390px] sm:max-w-[500px] xl:max-w-full 
                 h-[280px] sm:h-[400px] xl:h-full border border-[#c78d56]
                 bg-[#cd7c2e] rounded-lg overflow-hidden 
                 grid place-items-center hover:cursor-grab"

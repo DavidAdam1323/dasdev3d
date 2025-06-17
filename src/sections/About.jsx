@@ -44,7 +44,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden md:pt-40 pt-25"
+      className="relative overflow-hidden md:pt-40 pt-35"
     >
       {/* Title section with eyebrow and headline */}
       <TitleHeader
