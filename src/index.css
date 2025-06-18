@@ -95,7 +95,8 @@ section {
   }
 
   .model-bg {
-    @apply w-full max-w-[390px] sm:max-w-[500px] xl:max-w-full h-[280px] xl:h-[476px] rounded-lg bg-black-100 grid place-items-center;
+    @apply w-full max-w-[390px] sm:max-w-[500px] xl:max-w-full h-[280px] xl:h-[476px] rounded-lg 
+    bg-gradient-to-r from-blue-950 via-blue-50 to-black-200 grid place-items-center;
   }
 
   .hero-text {
