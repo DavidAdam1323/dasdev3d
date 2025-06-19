@@ -5,13 +5,23 @@ const links = [
   { name: "Projects", link: "#projects" },
 ];
 
-// Hero Section
+
+// Hero Section Starts Here ----------->
 const words = [
   { text: "Ideas", img: "/images/ideas.svg" },
   { text: "Concepts", img: "/images/concepts.svg" },
   { text: "Designs", img: "/images/designs.svg" },
   { text: "Code", img: "/images/code.svg" },
 ];
+
+const items = [
+  { word: "ideas", icon: <FaLightbulb className="text-yellow-400 mr-2" /> },
+  { word: "design", icon: <FaPaintBrush className="text-pink-500 mr-2" /> },
+  { word: "concepts", icon: <FaCubes className="text-purple-500 mr-2" /> },
+  { word: "code", icon: <FaCode className="text-green-500 mr-2" /> },
+];
+// Hero Section Ends Here ----------->
+
 
 // AnimatedCounter
 const counterItems = [
@@ -47,4 +57,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { links, words, counterItems, projects };
+export { links, words, items, counterItems, projects };
