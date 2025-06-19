@@ -3,7 +3,7 @@ import { counterItems } from "../constants";
 
 const AnimatedCounter = () => {
   return (
-    <div id="counter" className="padding-x-lg xl:mt-0 mt-6 xl:lg-px-20 lg:px-20 lg:pb-10 md:pt-7 px-5">
+    <div id="counter" className="padding-x-lg xl:mt-0 mt-6 xl:lg-px-20 sm:px-20 lg:pb-10 md:pt-3 px-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:w-full w-full justify-items-center">
         {counterItems.map((item) => (
           <div
