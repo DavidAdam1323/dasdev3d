@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
@@ -82,31 +81,21 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 md:mt-60 w-full flex flex-col xl:flex-row mt-40
+    @apply relative z-10 md:mt-35 w-full flex flex-col xl:flex-row mt-30
     items-start xl:items-center justify-center gap-y-4 gap-x-5 xl:gap-y-0 md:py-0 px-5 md:px-20;
   }
 
   .hero-left {
-    @apply relative w-full md:w-[600px] lg:w-[800px] xl:w-1/2 max-w-[800px] flex flex-col justify-center items-start z-10;
+    @apply relative w-full lg:w-[800px] xl:w-1/2 max-w-[800px] flex flex-col justify-center items-start z-10;
   }
 
   .hero-right {
-    @apply relative w-full md:w-[600px] lg:w-[800px] xl:w-1/2 max-w-[800px] flex justify-center items-center z-10;
+    @apply relative w-full md:w-[600px] lg:w-[800px] xl:w-1/2 max-w-[800px] flex justify-center pt-5 pb-2 items-center z-10;
   }
 
   .model-bg {
-    @apply w-full max-w-[390px] sm:max-w-[500px] xl:max-w-full h-[280px] xl:h-[476px] rounded-lg 
+    @apply w-full max-w-[390px] sm:max-w-full md:max-w-full h-[280px] sm:h-[400px] xl:h-[476px] rounded-lg 
     bg-gradient-to-r from-blue-950 via-blue-50 to-black-200 grid place-items-center;
-  }
-
-  .hero-text {
-    @apply flex flex-col justify-center mb-0 text-[clamp(1.5rem,5vw,3.3rem)] text-white-50 font-semibold relative z-10 pointer-events-none;
-    img {
-      @apply size-8 md:size-10 object-contain;
-    }
-    .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
-    }
   }
 
   .hero-badge {
@@ -196,6 +185,8 @@ section {
   }
 }
 
+
+/* Contact Section Starts - Form Design */
 .card-border {
   @apply border border-black-50 bg-black-100;
 }
@@ -218,151 +209,5 @@ form {
     }
   }
 }
+/* Contact Section Ends - Form Design */
 
-/* Hero text slider starts */
-.slide {
-  display: inline-block;
-  flex-direction: column;
-  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
-}
-
-@keyframes wordSlider {
-  0% {
-    transform: translateY(0.5%);
-  }
-  12.5% {
-    transform: translateY(-12.5%);
-  }
-  25% {
-    transform: translateY(-25%);
-  }
-  37.5% {
-    transform: translateY(-37.5%);
-  }
-  50% {
-    transform: translateY(-50%);
-  }
-  62.5% {
-    transform: translateY(-62.5%);
-  }
-  75% {
-    transform: translateY(-75%);
-  }
-  87.5% {
-    transform: translateY(-87.5%);
-  }
-}
-/* Hero Text slider ends */
-
-.gradient-line {
-  width: 2px;
-  background: linear-gradient(
-    0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
-    #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
-  );
-}
-
-.gradient-edge:nth-of-type(1) {
-  left: 0;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-.gradient-edge:nth-of-type(2) {
-  right: 0;
-  background: linear-gradient(
-    -90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-/* marquee */
-.marquee {
-  width: 100dvw;
-  overflow: hidden;
-  position: relative;
-}
-.marquee-box {
-  display: flex;
-  align-items: center;
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  animation: marquee 60s linear infinite;
-}
-.marquee-item {
-  float: left;
-}
-@keyframes marquee {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-/* marquee end */
-
-.card {
-  --start: 0;
-  position: relative;
-  z-index: 40;
-  overflow: hidden;
-  transition: border-color 1s ease-in-out;
-}
-
-.card::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 12px;
-  border: 2px solid transparent;
-  background: var(--gradient);
-  background-attachment: fixed;
-  mask: linear-gradient(#0000, #0000),
-    conic-gradient(
-      from calc((var(--start) - 15) * 1deg),
-      #ffffff1f 0deg,
-      white,
-      #ffffff00 100deg
-    );
-  mask-composite: intersect;
-  mask-clip: padding-box, border-box;
-  opacity: 0;
-  transition: 0.5s ease;
-}
-
-.glow {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(10px);
-  filter: saturate(200);
-}
-
-.card:hover::before {
-  opacity: 1;
-}
