@@ -14,12 +14,12 @@ const words = [
   { text: "Code", img: "/images/code.svg" },
 ];
 
-const items = [
-  { word: "ideas", icon: <FaLightbulb className="text-yellow-400 mr-2" /> },
-  { word: "design", icon: <FaPaintBrush className="text-pink-500 mr-2" /> },
-  { word: "concepts", icon: <FaCubes className="text-purple-500 mr-2" /> },
-  { word: "code", icon: <FaCode className="text-green-500 mr-2" /> },
-];
+// const items = [
+//   { word: "ideas", icon: <FaLightbulb className="text-yellow-400 mr-2" /> },
+//   { word: "design", icon: <FaPaintBrush className="text-pink-500 mr-2" /> },
+//   { word: "concepts", icon: <FaCubes className="text-purple-500 mr-2" /> },
+//   { word: "code", icon: <FaCode className="text-green-500 mr-2" /> },
+// ];
 // Hero Section Ends Here ----------->
 
 
@@ -57,4 +57,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { links, words, items, counterItems, projects };
+export { links, words, counterItems, projects };
