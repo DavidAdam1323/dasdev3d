@@ -5,13 +5,13 @@ const AnnouncementBar = ({ show }) => {
 
   return (
     <div
-      className="w-full bg-black-200 text-white-50 text-sm md:text-base 
-      px-5 md:px-20 py-0.5 flex justify-between items-center flex-wrap shadow-md z-40 
+      className="w-full bg-blue-50 text-black text-sm md:text-base 
+      px-5 sm:px-10 xl:px-20 py-0.5 flex justify-between items-center flex-wrap shadow-md z-40 
       fixed top-0 left-0 right-0 transition duration-300 ease-in-out animate-pulse"
     >
       {/* Mobile layout */}
       <div className="w-full flex justify-between md:hidden">
-        <span className="text-blue-50">📍 London, UK — Thanks for visiting!</span>
+        <span className="text-black text-[0.6rem]">📍 London, UK | Welcome! Thanks for visiting.</span>
         <div className="flex items-center gap-3">
           <a href="https://github.com/DavidAdam1323" target="_blank" rel="noreferrer">
             <FaGithub />
@@ -27,9 +27,9 @@ const AnnouncementBar = ({ show }) => {
 
       {/* Desktop layout */}
       <div className="w-full justify-between hidden md:flex text-sm">
-        <span className="text-blue-50">📍 London, UK</span>
-        <span className="text-blue-50">
-          Welcome to my portfolio, thanks for visiting!
+        <span className="text-black text-[0.85rem]">📍 London, UK</span>
+        <span className="text-black text-[0.85rem]">
+          Welcome to my digital portal! I'm glad you're here, thanks for visiting!
         </span>
         <div className="flex items-center gap-6 text-xl">
           <a href="https://github.com/DavidAdam1323" target="_blank" rel="noreferrer" className="hover:text-blue-50 transition">
