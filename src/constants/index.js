@@ -1,10 +1,18 @@
+// Mobile Navigation Links
+import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from "react-icons/fa";
+const mobileNavLinks = [
+  { name: "Home", icon: FaHome, link: "#hero" },
+  { name: "About", icon: FaUser, link: "#about" },
+  { name: "Projects", icon: FaFolderOpen, link: "#projects" },
+  { name: "Contact", icon: FaEnvelope, link: "#contact" },
+];
+
 // NavLinks
 const links = [
   { name: "Home", link: "#hero" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
 ];
-
 
 // Hero Section Starts Here ----------->
 const words = [
@@ -22,7 +30,6 @@ const words = [
 // ];
 // Hero Section Ends Here ----------->
 
-
 // AnimatedCounter
 const counterItems = [
   { value: 1, suffix: "+", label: "Years of Experience" },
@@ -35,21 +42,24 @@ const counterItems = [
 const projects = [
   {
     title: "Digital Product Passport - DPP",
-    description: "A web App that provides product info and digital passports via QR codes to support recycling and sustainability.",
+    description:
+      "A web App that provides product info and digital passports via QR codes to support recycling and sustainability.",
     github: "https://github.com/DavidAdam1323/eslando-SoCfinal-project",
     demo: "https://eslando.vercel.app/?product=2",
     image: "/images/project1.png",
   },
   {
     title: "CDR Devs — Portfolio Website",
-    description: "CDR Devs is a portfolio website by a passionate trio of frontend developers who bring digital visions to life.",
+    description:
+      "CDR Devs is a portfolio website by a passionate trio of frontend developers who bring digital visions to life.",
     github: "https://github.com/DavidAdam1323/cdrWebsite-vite",
     demo: "https://cdr-website-vite.vercel.app/",
     image: "/images/project2.png",
   },
   {
     title: "Neural Vision Publicity - NVP",
-    description: "A digital marketing website focused on innovative strategies, boost engagement, and drive results online.",
+    description:
+      "A digital marketing website focused on innovative strategies, boost engagement, and drive results online.",
     github: "https://github.com/DavidAdam1323/nvp-website-project",
     demo: "https://davidadam1323.github.io/nvp-website-project/",
     image: "/images/project3.png",
@@ -57,4 +67,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { links, words, counterItems, projects };
+export { mobileNavLinks, links, words, counterItems, projects };
