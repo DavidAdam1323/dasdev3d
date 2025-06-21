@@ -1,25 +1,33 @@
-import { links } from "../constants";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { navLinks } from "../constants/index";
+import { FaGithub, FaLinkedin, FaCubes, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-black-100 text-white-50 py-10 px-6 md:px-20">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+    <footer className="bg-gray-900 text-white-50 py-5 lg:py-10 px-5 md:px-20">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-7 ">
         {/* Brand */}
-        <div className="text-center md:text-left">
+        <div className="text-center lg:text-left">
           <h3 className="text-xl font-semibold">David Adam Silva</h3>
-          <p className="text-sm text-blue-50">
+          <p className="flex items-center gap-2 text-sm text-blue-50">
+            <FaCubes />
             Creative Developer & Problem Solver
           </p>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col justify-center">
-          <ul className="flex md:gap-30 gap-5 text-sm text-blue-50">
-            {links.map(({ link, name }) => (
-              <li key={name} className="hover:text-white-50 transition">
-                <a href={link} title={name}>
-                  <span>{name}</span>
+        <div className="order-2 lg:order-1 flex flex-col justify-center">
+          <ul className="flex gap-7 xl:gap-20">
+            {navLinks.map(({ id, name, icon: Icon }) => (
+              <li key={name} className="hover:text-blue-50 transition">
+                <a
+                  href={id}
+                  title={name}
+                  className="flex flex-col items-center"
+                >
+                  <Icon className="lg:hidden text-blue-50" />
+                  <span className="text-xs xl:text-sm text-white hover:text-blue-50 transition">
+                    {name}
+                  </span>
                 </a>
               </li>
             ))}
@@ -27,7 +35,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex md:gap-15 gap-5 text-lg">
+        <div className="order-1 lg:order-2 flex gap-5 lg:gap-5 text-lg">
           <a
             href="https://github.com/DavidAdam1323"
             target="_blank"
@@ -45,16 +53,18 @@ const Footer = () => {
             <FaLinkedin className="text-4xl" />
           </a>
           <a
-            href="mailto:davidadamgtr@gmail.com?subject=Let's Work Together&body=Hi David,"
+            href="https://x.com/DavidAdam1323"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-blue-50 transition"
           >
-            <FaEnvelope className="text-4xl" />
+            <FaXTwitter className="text-4xl" />
           </a>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="border-t border-black-200 mt-10 pt-6 text-center text-xs text-blue-50">
+      <div className="border-t border-black-200 mt-5 pt-5 lg:mt-10 lg:pt-10 text-center text-xs text-blue-50">
         © {new Date().getFullYear()} David A Silva. All rights reserved.
       </div>
     </footer>
