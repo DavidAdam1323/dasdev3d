@@ -1,17 +1,11 @@
-// Mobile Navigation Links
-import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from "react-icons/fa";
-const mobileNavLinks = [
-  { name: "Home", icon: FaHome, link: "#hero" },
-  { name: "About", icon: FaUser, link: "#about" },
-  { name: "Projects", icon: FaFolderOpen, link: "#projects" },
-  { name: "Contact", icon: FaEnvelope, link: "#contact" },
-];
-
 // NavLinks
-const links = [
-  { name: "Home", link: "#hero" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
+import { FaHome, FaUser, FaTools, FaFolderOpen, FaEnvelope } from "react-icons/fa";
+const navLinks = [
+  { name: "Home", id: "#home", icon: FaHome },
+  { name: "About", id: "#about", icon: FaUser },
+  { name: "Services", id: "#services", icon: FaTools },
+  { name: "Projects", id: "#projects", icon: FaFolderOpen },
+  { name: "Contact", id: "#contact", icon: FaEnvelope },
 ];
 
 // Hero Section Starts Here ----------->
@@ -67,4 +61,4 @@ const projects = [
   // Add more projects...
 ];
 
-export { mobileNavLinks, links, words, counterItems, projects };
+export { navLinks, words, counterItems, projects };
