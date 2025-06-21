@@ -5,8 +5,8 @@ import HeroButtons from "../components/Hero/HeroButtons";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="hero-layout">
+    <section id="home" className="relative overflow-hidden">
+      <div className="hero-layout md:px-10 xl:px-20">
         <div>
           {/* Small Devices Layout */}
           <HeroTitleHeader />
