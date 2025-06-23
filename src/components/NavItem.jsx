@@ -12,7 +12,7 @@ const NavItem = ({ id, name, icon: Icon, onClick, variant = "desktop" }) => {
         className={`flex items-center ${
           isMobile
             ? "px-5 sm:pl-7 py-3 text-xl sm:text-2xl sm:py-6"
-            : "py-2 px-3 md:p-0"
+            : "py-2 px-3 lg:text-xl md:p-0"
         } hover:text-white`}
       >
         {Icon && (
