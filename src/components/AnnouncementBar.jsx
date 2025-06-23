@@ -1,26 +1,37 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
-const AnnouncementBar = ({ show }) => {
-  if (!show) return null;
-
+const AnnouncementBar = () => {
   return (
     <div
-      className="w-full bg-blue-50 text-black text-sm md:text-base 
-      px-5 sm:px-10 xl:px-20 py-0.5 flex justify-between items-center flex-wrap shadow-md z-40 
-      fixed top-0 left-0 right-0 transition duration-300 ease-in-out animate-pulse"
+      className="sticky top-0 z-40 w-full bg-blue-50 text-black px-5 
+      sm:px-10 xl:px-20 py-0.5 md:py-1 text-sm md:text-base animate-pulse"
     >
       {/* Mobile layout */}
       <div className="w-full flex justify-between md:hidden">
-        <span className="text-black text-[0.6rem]">📍 London, UK | Welcome! Thanks for visiting.</span>
-        <div className="flex items-center gap-3">
-          <a href="https://github.com/DavidAdam1323" target="_blank" rel="noreferrer">
+        <span className="text-black text-[0.6rem]">
+          📍 London, UK | Welcome! Thanks for visiting.
+        </span>
+        <div className="flex items-center gap-1">
+          <a
+            href="https://github.com/DavidAdam1323"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/davidadamsilva" target="_blank" rel="noreferrer">
+          <a
+            href="https://linkedin.com/in/davidadamsilva"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin />
           </a>
-          <a href="mailto:davidadamgtr@gmail.com?subject=Let's Work Together&body=Hi David,">
-            <FaEnvelope />
+          <a
+            href="https://x.com/DavidAdam1323"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter />
           </a>
         </div>
       </div>
@@ -29,17 +40,33 @@ const AnnouncementBar = ({ show }) => {
       <div className="w-full justify-between hidden md:flex text-sm">
         <span className="text-black text-[0.85rem]">📍 London, UK</span>
         <span className="text-black text-[0.85rem]">
-          Welcome to my digital portal! I'm glad you're here, thanks for visiting!
+          Welcome to my digital portal! I'm glad you're here, thanks for
+          visiting!
         </span>
-        <div className="flex items-center gap-6 text-xl">
-          <a href="https://github.com/DavidAdam1323" target="_blank" rel="noreferrer" className="hover:text-blue-50 transition">
+        <div className="flex items-center gap-3 text-xl">
+          <a
+            href="https://github.com/DavidAdam1323"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition"
+          >
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/davidadamsilva" target="_blank" rel="noreferrer" className="hover:text-blue-50 transition">
+          <a
+            href="https://linkedin.com/in/davidadamsilva"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition"
+          >
             <FaLinkedin />
           </a>
-          <a href="mailto:davidadamgtr@gmail.com?subject=Let's Work Together&body=Hi David," className="hover:text-blue-50 transition">
-            <FaEnvelope />
+          <a
+            href="https://x.com/DavidAdam1323"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition"
+          >
+            <FaXTwitter />
           </a>
         </div>
       </div>
