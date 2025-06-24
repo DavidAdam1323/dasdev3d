@@ -2,6 +2,8 @@ import { navLinks } from "../constants/index";
 import { FaGithub, FaLinkedin, FaCubes, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const footerNavLinks = navLinks.slice(0, -1)
+
   return (
     <footer className="bg-gray-900 text-white-50 py-5 lg:py-10 px-5 md:px-20">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-7 ">
@@ -17,7 +19,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="order-2 lg:order-1 flex flex-col justify-center">
           <ul className="flex gap-7 xl:gap-20">
-            {navLinks.map(({ id, name, icon: Icon }) => (
+            {footerNavLinks.map(({ id, name, icon: Icon }) => (
               <li key={name} className="hover:text-blue-50 transition">
                 <a
                   href={id}
