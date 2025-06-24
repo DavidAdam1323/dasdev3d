@@ -28,6 +28,12 @@ body {
 /* Root styles (optional) */
 :root {
   --header-height: 64px;
+  --color-white-50: #d9ecff;
+  --color-black-50: #1c1c21;
+  --color-black-100: #0e0e10;
+  --color-black-200: #282732;
+  --color-blue-50: #839cb5;
+  --color-blue-100: #2d2d38;
 }
 
 /* Improve anchor scroll positioning */
@@ -49,10 +55,4 @@ input,
 textarea,
 select {
   font: inherit;
-}
-
-/* Focus styles for accessibility */
-:focus {
-  outline: 2px solid #3b82f6; /* Tailwind blue-500 */
-  outline-offset: 2px;
 }
