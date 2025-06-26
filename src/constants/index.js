@@ -1,5 +1,16 @@
+import {
+  FaHome,
+  FaUser,
+  FaTools,
+  FaFolderOpen,
+  FaEnvelope,
+  FaBusinessTime,
+  FaSmileBeam,
+  FaCheckCircle,
+  FaRedoAlt,
+} from "react-icons/fa";
+
 // NavLinks
-import { FaHome, FaUser, FaTools, FaFolderOpen, FaEnvelope } from "react-icons/fa";
 const navLinks = [
   { name: "Home", id: "#home", icon: FaHome },
   { name: "About", id: "#about", icon: FaUser },
@@ -26,10 +37,34 @@ const words = [
 
 // AnimatedCounter
 const counterItems = [
-  { value: 1, suffix: "+", label: "Years of Experience" },
-  { value: 3, suffix: "+", label: "Satisfied Clients" },
-  { value: 5, suffix: "+", label: "Completed Projects" },
-  { value: 100, suffix: "%", label: "Client Retention Rate" },
+  {
+    value: 1,
+    suffix: "+",
+    icon: FaBusinessTime,
+    label: "Years of Experience",
+    color: "text-amber-400",
+  },
+  {
+    value: 3,
+    suffix: "+",
+    icon: FaSmileBeam,
+    label: "Satisfied Clients",
+    color: "text-teal-400",
+  },
+  {
+    value: 5,
+    suffix: "+",
+    icon: FaCheckCircle,
+    label: "Completed Projects",
+    color: "text-blue-400",
+  },
+  {
+    value: 100,
+    suffix: "%",
+    icon: FaRedoAlt,
+    label: "Client Retention Rate",
+    color: "text-purple-400",
+  },
 ];
 
 // Projects - Project Card Info
