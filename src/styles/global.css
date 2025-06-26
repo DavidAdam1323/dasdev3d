@@ -28,17 +28,17 @@ body {
 /* Root styles (optional) */
 :root {
   --header-height: 64px;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
+  --white-50: #d9ecff;
+  --black-50: #1c1c21;
+  --black-100: #0e0e10;
+  --black-200: #282732;
+  --blue-50: #839cb5;
+  --blue-100: #2d2d38;
 }
 
 /* Improve anchor scroll positioning */
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 110px;
 }
 
 /* Images and media */
@@ -55,4 +55,32 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+/* Hero 3d Model */
+.hero3dmodel-background {
+  width: 100%;
+  max-width: 390px;
+  height: 280px;
+  cursor: grab;
+  border-radius: 0.5rem; /* matches Tailwind's rounded-lg */
+  background-image: linear-gradient(to bottom right, #0f172a, #839cb5, #282732);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .hero3dmodel-background {
+    max-width: 500px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero3dmodel-background {
+    max-width: 100%;
+    height: 100%;
+  }
 }
