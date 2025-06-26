@@ -3,7 +3,7 @@ const NavItem = ({ id, name, icon: Icon, onClick, variant = "desktop" }) => {
   return (
     <li
       key={name}
-      className={`relative group ${isMobile ? "text-white" : "text-white-50"}`}
+      className={`relative group ${isMobile ? "text-white" : "text-[var(--white-50)]"}`}
     >
       <a
         href={id}
@@ -17,7 +17,7 @@ const NavItem = ({ id, name, icon: Icon, onClick, variant = "desktop" }) => {
       >
         {Icon && (
           <Icon
-            className="mr-2 text-blue-50"
+            className="mr-2 text-[var(--blue-50)]"
           />
         )}
         <span>{name}</span>
