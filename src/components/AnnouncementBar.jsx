@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 const AnnouncementBar = () => {
   return (
     <div
-      className="sticky top-0 z-40 w-full bg-blue-50 text-black px-5 
+      className="sticky top-0 z-40 w-full bg-[var(--blue-50)] text-black px-5 
       sm:px-10 xl:px-20 py-0.5 md:py-1 text-sm md:text-base animate-pulse"
     >
       {/* Mobile layout */}
