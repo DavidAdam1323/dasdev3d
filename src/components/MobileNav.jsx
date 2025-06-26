@@ -59,7 +59,7 @@ const MobileNav = () => {
               before:absolute before:w-4 before:h-4 before:bg-gray-900 
               before:rotate-45 before:right-4 before:-top-2"
           >
-            <ul className="flex flex-col divide-y divide-blue-50">
+            <ul className="flex flex-col divide-y divide-[var(--blue-50)]">
               {/* Map through navLinks and render animated NavItems */}
               {navLinks.map(({ id, name, icon }, index) => (
                 <motion.li
