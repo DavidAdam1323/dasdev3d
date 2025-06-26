@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="text-center lg:text-left">
           <h3 className="text-xl font-semibold">David Adam Silva</h3>
-          <p className="flex items-center gap-2 text-sm text-blue-50">
+          <p className="flex items-center gap-2 text-sm text-[var(--blue-50)]">
             <FaCubes />
             Creative Developer & Problem Solver
           </p>
@@ -20,14 +20,14 @@ const Footer = () => {
         <div className="order-2 lg:order-1 flex flex-col justify-center">
           <ul className="flex gap-7 xl:gap-20">
             {footerNavLinks.map(({ id, name, icon: Icon }) => (
-              <li key={name} className="hover:text-blue-50 transition">
+              <li key={name} className="hover:text-[var(--blue-50)] transition">
                 <a
                   href={id}
                   title={name}
                   className="flex flex-col items-center"
                 >
-                  <Icon className="lg:hidden text-blue-50" />
-                  <span className="text-xs xl:text-sm text-white hover:text-blue-50 transition">
+                  <Icon className="lg:hidden text-[var(--blue-50)]" />
+                  <span className="text-xs xl:text-sm text-white hover:text-[var(--blue-50)] transition">
                     {name}
                   </span>
                 </a>
@@ -42,7 +42,7 @@ const Footer = () => {
             href="https://github.com/DavidAdam1323"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-50 transition"
+            className="hover:text-[var(--blue-50)] transition"
           >
             <FaGithub className="text-4xl" />
           </a>
@@ -50,7 +50,7 @@ const Footer = () => {
             href="https://linkedin.com/in/davidadamsilva"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-50 transition"
+            className="hover:text-[var(--blue-50)] transition"
           >
             <FaLinkedin className="text-4xl" />
           </a>
@@ -58,7 +58,7 @@ const Footer = () => {
             href="https://x.com/DavidAdam1323"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-50 transition"
+            className="hover:text-[var(--blue-50)] transition"
           >
             <FaXTwitter className="text-4xl" />
           </a>
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-black-200 mt-5 pt-5 lg:mt-10 lg:pt-10 text-center text-xs text-blue-50">
+      <div className="border-t border-[var(--blue-50)] mt-5 pt-5 lg:mt-10 lg:pt-10 text-center text-xs text-[var(--blue-50)]">
         © {new Date().getFullYear()} David A Silva. All rights reserved.
       </div>
     </footer>
