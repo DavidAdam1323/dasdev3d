@@ -9,8 +9,8 @@ function App() {
   return (
     <Layout>
       <Hero />
-      <About />
-      <Projects />
+      {/* <About /> */}
+      {/* <Projects /> */}
       <Contact />
       <Footer />
     </Layout>
