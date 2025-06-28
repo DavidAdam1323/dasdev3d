@@ -1,25 +1,30 @@
 import { useRef } from "react";
-import useScrollReveal from "../hooks/useScrollReveal";
+import { motion, useInView } from "framer-motion";
 
-const TitleHeader = ({ eyebrowText, titleText }) => {
+const TitleHeader = ({ title, subTitle }) => {
   const sectionRef = useRef(null);
-  useScrollReveal(sectionRef, {
-    selector: ".reveal",
-    stagger: 0.4,
-    duration: 1.5,
-  });
+  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
 
   return (
-    <div
-      ref={sectionRef}
-      className="w-full flex flex-col items-center text-center"
-    >
-      <p className="w-fit px-6 py-2 bg-black-50 text-white-50 rounded-full text-sm font-medium tracking-wide mb-3 reveal">
-        {eyebrowText}
-      </p>
-      <h1 className="text-4xl sm:text-5xl font-semibold text-white leading-tight reveal">
-        {titleText}
-      </h1>
+    <div ref={sectionRef} className="relative text-center mb-5">
+      <motion.h1
+        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+        animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="relative inline-block text-3xl sm:text-4xl font-bold capitalize pb-7"
+      >
+        {/* Decorative underline */}
+        <span
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] w-[60px] bg-green-300"
+          aria-hidden="true"
+        ></span>
+
+        {title}
+
+        <span className="block text-[13px] font-medium uppercase tracking-[4px] text-[var(--white-50)] pt-3">
+          {subTitle}
+        </span>
+      </motion.h1>
     </div>
   );
 };
