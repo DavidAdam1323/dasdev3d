@@ -1,6 +1,6 @@
 import DeskNav from "./DeskNav";
 import MobileNav from "./MobileNav";
-import CTAButton from "../components/CTAButton";
+import CtaNavButton from "../components/CtaNavButton";
 import logo from "../assets/dasdev-logo.png";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ const NavBar = () => {
         </a>
         <DeskNav />
         <MobileNav />
-        <CTAButton />
+        <CtaNavButton />
       </nav>
     </header>
   );
