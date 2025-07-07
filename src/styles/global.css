@@ -34,6 +34,8 @@ body {
   --black-200: #282732;
   --blue-50: #839cb5;
   --blue-100: #2d2d38;
+  --bubbly-bg: var(--blue-50);
+  --bubbly-text: var(--white-50);
 }
 
 /* Improve anchor scroll positioning */
@@ -105,13 +107,13 @@ form textarea {
 @media (min-width: 768px) {
   form input,
   form textarea {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 
 form input::placeholder,
 form textarea::placeholder {
-  color: var(--blue-50); 
+  color: var(--blue-50);
 }
 
 form input,
@@ -132,4 +134,54 @@ form a {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Animated Button */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.link .span-1,
+.link .span-2 {
+  position: relative;
+}
+
+.link .span-1 {
+  transition: opacity 0.3s ease;
+}
+
+.link .span-1 {
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.link .span-2 {
+  margin-left: 0.5em;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.link .span-2 {
+  margin-left: 0.5em;
+}
+
+.link .color {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  background-image: linear-gradient(to top right, #111827, #8bbccc);
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: -0.75em;
 }
