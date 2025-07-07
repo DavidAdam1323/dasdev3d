@@ -9,7 +9,7 @@ function App() {
   return (
     <Layout>
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Projects /> */}
       <Contact />
       <Footer />
