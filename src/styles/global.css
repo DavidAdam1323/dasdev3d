@@ -39,8 +39,8 @@ body {
 }
 
 /* Improve anchor scroll positioning */
-[id] {
-  scroll-margin-top: 110px;
+#home, #contact {
+  scroll-margin-top: 60px;
 }
 
 /* Images and media */
