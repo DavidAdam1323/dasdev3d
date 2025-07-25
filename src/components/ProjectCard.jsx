@@ -1,35 +1,36 @@
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+
 const ProjectCard = ({ title, description, github, demo, image }) => {
   return (
-    <div className="bg-black-100 rounded-lg border border-black-200 
-                    overflow-hidden p-6 reveal flex flex-col 
-                    md:w-[450px] w-[390px] h-[500px]">
+    <div className="bg-[var(--black-100)] rounded-lg border border-[var(--black-50)] overflow-hidden 
+                    p-5 reveal flex flex-col sd:max-w-[400px] md:w-[450px] w-[350px] h-[550px]">
       {image && (
-        <div className="md:h-[300px] md:w-[400px] h-[280px] w-auto mb-5">
+        <div className="relative md:h-[300px] md:w-[400px] h-[280px] w-auto mb-5">
           <img
             src={image}
             alt={title}
-            className="w-auto md:h-[300px] md:w-[400px] h-[280px] object-cover bg-black-200 rounded-md mb-0"
+            className="absolute max-h-full w-full object-cover bg-[var(--black-200)] rounded-sm mb-0"
           />
         </div>
       )}
-      <h3 className="text-lg font-semibold text-white-50">{title}</h3>
-      <p className="text-sm text-blue-50 mt-2 flex-grow">{description}</p>
-      <div className="flex gap-4 mt-4">
+      <h3 className="text-lg font-semibold text-[var(--white-50)]">{title}</h3>
+      <p className="text-sm text-[var(--blue-50)] mt-2 flex-grow">{description}</p>
+      <div className="flex flex-col justify-center gap-4 mt-4 w-full">
         <a
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-100 text-white-50 py-2 px-4 rounded-md text-sm hover:opacity-80 transition"
+          className="flex gap-2 items-center justify-center w-full bg-[var(--blue-100)] text-center text-[var(--white-50)] py-3 px-6 rounded-lg font-semibold text-lg hover:opacity-80 transition"
         >
-          GitHub
+          View Code <FiGithub className="text-xl" />
         </a>
         <a
           href={demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white-50 text-black-100 py-2 px-4 rounded-md text-sm hover:opacity-90 transition"
+          className="flex gap-2 items-center justify-center w-full border border-[var(--white-50)] text-center text-[var(--white-50)] py-3 px-6 rounded-lg font-semibold text-lg hover:opacity-90 transition"
         >
-          Live Demo
+          Live Demo <FiExternalLink className="text-xl" />
         </a>
       </div>
     </div>
