@@ -39,7 +39,7 @@ body {
 }
 
 /* Improve anchor scroll positioning */
-#home, #contact {
+[id] {
   scroll-margin-top: 60px;
 }
 
