@@ -125,11 +125,10 @@ const AnimatedBubblyButton = () => {
       ref={buttonRef}
       className="bubbly-button w-full relative inline-flex items-center justify-center my-1 px-6 py-3 
         bg-gradient-to-tr from-gray-900 to-[var(--blue-50)] text-white transition-transform 
-        duration-200 rounded-lg border-none cursor-pointer shadow-[0px_2px_5px_rgba(139,188,204,0.24)]"
+        duration-200 rounded-lg border-none"
       whileTap={{
         scale: 0.9,
         background: "linear-gradient(to right, #111828, #1a365d)",
-        boxShadow: "0px 3px 8px rgba(139,188,204,0.35)",
       }}
       onClick={() => {
         const link = document.createElement("a");
