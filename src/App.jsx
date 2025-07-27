@@ -10,7 +10,7 @@ function App() {
     <Layout>
       <Hero />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Contact />
       <Footer />
     </Layout>
