@@ -4,12 +4,14 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
+import Services from "./sections/Services";
 
 function App() {
   return (
     <Layout>
       <Hero />
       <About />
+      <Services />
       <Projects />
       <Contact />
       <Footer />
