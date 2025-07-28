@@ -96,4 +96,48 @@ const projects = [
   // Add more projects...
 ];
 
-export { navLinks, words, counterItems, projects };
+// Services
+import {
+  FiCode,
+  FiLayout,
+  FiGitBranch,
+} from "react-icons/fi";
+
+const services = [
+  {
+    icon: FiCode,
+    title: "Frontend Development",
+    description:
+      "Building responsive, accessible interfaces with modern standards.",
+    skills: [
+      "Semantic HTML5 & CSS3 (Flexbox/Grid)",
+      "Vanilla JavaScript (ES6+)",
+      "React.js fundamentals (Hooks, Components)",
+    ],
+    projects: "5+ projects delivered",
+  },
+  {
+    icon: FiLayout,
+    title: "Website Optimization",
+    description: "Improving performance and maintainability of existing sites.",
+    skills: [
+      "CSS/JS bundle optimization",
+      "Mobile responsiveness fixes",
+      "Basic SEO improvements",
+    ],
+    projects: "3+ refactor projects",
+  },
+  {
+    icon: FiGitBranch,
+    title: "Collaborative Development",
+    description: "Working alongside senior developers in team environments.",
+    skills: [
+      "Git version control",
+      "Agile workflow familiarity",
+      "Code reviews participation",
+    ],
+    projects: "2+ team projects",
+  },
+];
+
+export { navLinks, words, counterItems, projects, services };
